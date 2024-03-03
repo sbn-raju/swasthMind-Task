@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-DataBase</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for( let i = 0; i < singleStudent.length; i++ ) { %>
+                <tr>
+                    <td><%-singleStudent[i].id %></td>
+                    <td><%-singleStudent[i].name %><td>
+                    <td><%-singleStudent[i].age %><td>
+                    <td><button><a href="/deleteStudent/<%-singleStudent[i].id %>">Delete</a></button></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
